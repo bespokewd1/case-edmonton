@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Activity, BookOpen, CalendarHeart, Footprints, GraduationCap, Smile, Trophy, Users, Coffee, CircleDot, HeartPulse } from "lucide-react";
+import { Activity, Dumbbell, CalendarHeart, Footprints, GraduationCap, Smile, Trophy, Users, Coffee, CircleDot, HeartPulse } from "lucide-react";
 import hero from "@/assets/hero-river-valley.jpg";
 import walkers from "@/assets/hero-walking.jpg";
 import breakfast from "@/assets/community-breakfast.jpg";
@@ -32,10 +32,11 @@ const activities = [
 ];
 
 const benefits = [
-  { title: "Stay Active", text: "Encouraging regular movement and participation.", icon: Activity },
-  { title: "Build Friendships", text: "Connect with people who share an interest in active living.", icon: Users },
-  { title: "Keep Learning", text: "Discover practical information through educational programs.", icon: BookOpen },
-  { title: "Enjoy Community", text: "Participate in gatherings and shared experiences.", icon: Smile },
+  { title: "An active, heart-healthy lifestyle", text: "Regular activity with others makes it easier to keep healthy habits going.", icon: Activity },
+  { title: "Safe, effective exercise habits", text: "Group sessions encourage steady, sensible exercise you can keep up week to week.", icon: HeartPulse },
+  { title: "Less anxiety, low mood, and loneliness", text: "Many members find that staying active with friends can help ease worry, low mood, and isolation.", icon: Smile },
+  { title: "Strength, endurance, and stamina", text: "Ongoing activity helps build strength and endurance over time.", icon: Dumbbell },
+  { title: "Camaraderie and connection", text: "Shared experiences and friendly faces make every activity something to look forward to.", icon: Users },
 ];
 
 function Home() {
@@ -50,7 +51,10 @@ function Home() {
             <h1 className="mt-5 text-4xl sm:text-5xl lg:text-[3.4rem]">
               Stay Active. Stay Connected. Support Your Heart.
             </h1>
-            <p className="mt-6 text-lg md:text-xl">
+            <p className="mt-5 text-xl font-bold text-warm md:text-2xl">
+              Building strength, confidence, and community — one step at a time.
+            </p>
+            <p className="mt-5 text-lg md:text-xl">
               Discover a welcoming Edmonton community where active living, meaningful friendships, and heart-health education come together.
             </p>
             <p className="mt-4 text-muted-foreground">
@@ -125,10 +129,10 @@ function Home() {
 
       {/* Benefits */}
       <section className="container-site py-20">
-        <SectionHeading center eyebrow="Why people join" title="More Than Activities. A Place to Belong." />
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <SectionHeading center eyebrow="Why people join" title="More Than Activities. A Place to Belong." text="CASE was established to help people continue an active, heart-healthy lifestyle beyond their initial cardiac rehabilitation. Members value it for:" />
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
           {benefits.map((b) => (
-            <li key={b.title} className="card-surface p-7">
+            <li key={b.title} className="card-surface p-7 lg:col-span-2 lg:[&:nth-child(4)]:col-start-2">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-sage-soft text-sage-deep">
                 <b.icon className="h-6 w-6" aria-hidden="true" />
               </span>
@@ -137,6 +141,7 @@ function Home() {
             </li>
           ))}
         </ul>
+        <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">Everyone's experience is different. CASE is a community group, not a medical service — please follow your own healthcare provider's advice.</p>
       </section>
 
       {/* Events */}

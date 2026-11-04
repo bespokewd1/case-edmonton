@@ -49,8 +49,8 @@ function About() {
           <div>
             <SectionHeading eyebrow="Our story" title="More than four decades of keeping each other moving" />
             <div className="mt-6 space-y-4 text-lg">
-              <p>CASE traces its roots to 1979, when cardiac rehabilitation staff at the University of Alberta recognized the importance of continued activity and support following rehabilitation.</p>
-              <p>Over time, the organization developed into a community focused on exercise, education, recreation, and lasting friendships.</p>
+              <p>CASE traces its roots to 1979, when cardiac rehabilitation staff at the University of Alberta Hospital saw that people finishing rehabilitation needed a way to keep up their heart-healthy exercise habits.</p>
+              <p>That original purpose still guides CASE today. Over the years it has grown into a community built around exercise, education, recreation, and lasting friendships.</p>
               <p>The Cardiac Athletic Society of Edmonton was formally registered as a society in 1989.</p>
             </div>
           </div>
