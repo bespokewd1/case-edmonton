@@ -12,4 +12,6 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Pre-bundle icons up front so Vite doesn't re-optimize mid-session (which loads two React copies).
+  vite: { optimizeDeps: { include: ["lucide-react"] } },
 });
