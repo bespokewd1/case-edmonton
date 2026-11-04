@@ -27,7 +27,7 @@ const items: Item[] = [
     body: ["Our exercise program offers a variety of engaging activities that support heart health, strength, mobility, and social connection — at a pace that's comfortable and accessible.", "Healthy at Heart meets on Tuesdays and Thursdays, starting with an aerobic class and followed by pickleball."],
     list: ["Aerobic exercise — 11:30 a.m. to 12:15 p.m.", "Pickleball — 12:15 p.m. to 12:45 p.m."],
     location: "Booster Juice Recreation Centre (Terwillegar), Edmonton",
-    note: "Contact CASE for current program details and session times.",
+    note: "Tuesdays & Thursdays · 11:30 a.m. – 12:45 p.m. New faces are always welcome.",
   },
   {
     id: "golf", title: "Golf", img: golf, alt: "Two friends enjoying a round of golf on a sunny day",
