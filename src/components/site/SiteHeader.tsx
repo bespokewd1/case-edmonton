@@ -18,7 +18,7 @@ export function SiteHeader() {
       >
         Skip to main content
       </a>
-      <div className="container-site flex h-20 items-center justify-between gap-4">
+      <div className="container-site flex h-20 items-center justify-between gap-3">
         <Logo />
         <nav aria-label="Main" className="hidden items-center gap-0.5 xl:flex">
           {NAV.map((n) => (
@@ -32,7 +32,7 @@ export function SiteHeader() {
         </nav>
         <button
           type="button"
-          className="btn btn-outline min-h-12 px-4 xl:hidden"
+          className="btn btn-outline min-h-12 shrink-0 px-4 xl:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
