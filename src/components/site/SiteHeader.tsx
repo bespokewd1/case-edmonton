@@ -7,7 +7,7 @@ import { Logo } from "./Logo";
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const linkCls =
-    "rounded-full px-3 py-2 text-[0.95rem] font-semibold text-foreground transition-colors hover:bg-burgundy-soft hover:text-primary";
+    "whitespace-nowrap rounded-full px-2.5 py-2 text-[0.9rem] font-semibold text-foreground transition-colors hover:bg-burgundy-soft hover:text-primary";
   const activeCls = "text-primary bg-burgundy-soft";
 
   return (
@@ -20,13 +20,13 @@ export function SiteHeader() {
       </a>
       <div className="container-site flex h-20 items-center justify-between gap-4">
         <Logo />
-        <nav aria-label="Main" className="hidden items-center gap-1 xl:flex">
+        <nav aria-label="Main" className="hidden items-center gap-0.5 xl:flex">
           {NAV.map((n) => (
             <Link key={n.to} to={n.to} className={linkCls} activeProps={{ className: activeCls }} activeOptions={{ exact: n.to === "/" }}>
               {n.label}
             </Link>
           ))}
-          <Link to="/members" className="ml-2 btn btn-outline min-h-11 px-4 text-[0.95rem]">
+          <Link to="/members" className="ml-2 btn btn-outline min-h-11 whitespace-nowrap px-4 text-[0.9rem]">
             <Lock className="h-4 w-4" aria-hidden="true" /> Members Login
           </Link>
         </nav>
