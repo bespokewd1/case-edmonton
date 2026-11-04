@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Dumbbell, GraduationCap, Trophy, Users } from "lucide-react";
 import breakfast from "@/assets/community-breakfast.jpg";
-import hero from "@/assets/hero-walking.jpg";
+import hero from "@/assets/hero-river-valley.jpg";
 import { pageHead } from "@/lib/site";
 import { ContactCta, PageHero, SectionHeading } from "@/components/site/Blocks";
 
@@ -26,7 +26,7 @@ const timeline = [
 function About() {
   return (
     <>
-      <PageHero eyebrow="About CASE" title="About the Cardiac Athletic Society of Edmonton" text="Building strength, friendships, and community through active living since 1979." image={hero} alt="Adults enjoying a walk together on a trail overlooking Edmonton" />
+      <PageHero eyebrow="About CASE" title="About the Cardiac Athletic Society of Edmonton" text="Building strength, friendships, and community through active living since 1979." image={hero} alt="Friends walking a river valley trail toward downtown Edmonton, seen from behind" />
 
       <section className="container-site grid gap-12 py-20 lg:grid-cols-2">
         <div>
