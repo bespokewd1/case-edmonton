@@ -35,11 +35,11 @@ const activities = [
 ];
 
 const benefits = [
-  { title: "An active, heart-healthy lifestyle", text: "Regular activity with others makes it easier to keep healthy habits going.", icon: Activity },
-  { title: "Safe, effective exercise habits", text: "Group sessions encourage steady, sensible exercise you can keep up week to week.", icon: HeartPulse },
-  { title: "Less anxiety, low mood, and loneliness", text: "Many members find that staying active with friends can help ease worry, low mood, and isolation.", icon: Smile },
-  { title: "Strength, endurance, and stamina", text: "Ongoing activity helps build strength and endurance over time.", icon: Dumbbell },
-  { title: "Camaraderie and connection", text: "Shared experiences and friendly faces make every activity something to look forward to.", icon: Users },
+  { title: "Promotes an active, heart-healthy lifestyle", text: "Regular activity with others makes it easier to keep healthy habits going.", icon: Activity },
+  { title: "Encourages safe, effective exercise habits", text: "Group sessions encourage steady, sensible exercise you can keep up week to week.", icon: HeartPulse },
+  { title: "Can help reduce anxiety, symptoms of depression and loneliness", text: "Many members find that staying active with friends can help ease worry, low mood, and isolation.", icon: Smile },
+  { title: "Builds strength, endurance and overall stamina", text: "Ongoing activity helps build strength and endurance over time.", icon: Dumbbell },
+  { title: "Fosters camaraderie and connection through shared experiences", text: "Shared experiences and friendly faces make every activity something to look forward to.", icon: Users },
 ];
 
 function Home() {
@@ -131,18 +131,8 @@ function Home() {
 
       {/* Benefits */}
       <section className="container-site py-20">
-        <SectionHeading center eyebrow="Why people join" title="More Than Activities. A Place to Belong." text="Over the years, CASE members have discovered that taking part in our exercise, educational, and social programs brings meaningful, lasting benefits:" />
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
-          {benefits.map((b) => (
-            <li key={b.title} className="card-surface p-7 lg:col-span-2 lg:[&:nth-child(4)]:col-start-2">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-sage-soft text-sage-deep">
-                <b.icon className="h-6 w-6" aria-hidden="true" />
-              </span>
-              <h3 className="mt-5 text-xl">{b.title}</h3>
-              <p className="mt-2 text-muted-foreground">{b.text}</p>
-            </li>
-          ))}
-        </ul>
+        <SectionHeading center eyebrow="Benefits of CASE" title="More Than Activities. A Place to Belong." text="Over the years, CASE members have discovered that taking part in our exercise, educational, and social programs brings meaningful, lasting benefits:" />
+        <BenefitCarousel benefits={benefits} />
         <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">Everyone's experience is different. CASE is a community group, not a medical service — please follow your own healthcare provider's advice.</p>
       </section>
 
