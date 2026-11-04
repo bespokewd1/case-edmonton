@@ -45,22 +45,22 @@ function Home() {
     <>
       {/* Hero */}
       <section className="bg-card">
-        <div className="container-site grid items-center gap-10 py-12 md:py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:py-20">
+        <div className="container-site grid items-center gap-10 py-8 sm:py-12 md:py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:py-20">
           <div>
-            <p className="eyebrow">Edmonton, Alberta · Since 1979</p>
-            <h1 className="mt-5 text-4xl sm:text-5xl lg:text-[3.4rem]">
-              Stay Active. Stay Connected. Support Your Heart.
+            <p className="eyebrow hidden sm:inline-flex">Edmonton, Alberta · Since 1979</p>
+            <h1 className="text-[2rem] leading-tight sm:mt-5 sm:text-5xl lg:text-[3.4rem]">
+              Stay Active.<br /> Stay Connected.<br /> Support your Heart.
             </h1>
-            <p className="mt-5 text-xl font-bold text-warm md:text-2xl">
-              Building strength, confidence, and community — one step at a time.
+            <p className="mt-4 text-lg font-bold text-warm sm:mt-5 md:text-2xl">
+              Building strength, confidence, and lasting friendships through exercise, education, and community activities in Edmonton.
             </p>
-            <p className="mt-5 text-lg md:text-xl">
+            <p className="mt-5 hidden text-lg md:block xl:text-xl">
               Discover a welcoming Edmonton community where active living, meaningful friendships, and heart-health education come together.
             </p>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-4 hidden text-muted-foreground md:block">
               CASE brings people together through exercise, recreation, educational programs, and social activities.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
               <Link to="/activities" className="btn btn-primary">Explore Our Activities</Link>
               <Link to="/about" className="btn btn-outline">Learn About CASE</Link>
             </div>
