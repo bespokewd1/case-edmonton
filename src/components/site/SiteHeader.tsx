@@ -37,7 +37,8 @@ export function SiteHeader() {
         <nav aria-label="Main" className="hidden items-center gap-0.5 xl:flex">
           {NAV.map((n) =>
             n.to === "/activities" ? (
-              <div key={n.to} className="group relative">
+              <div key={n.to} className="flex items-center gap-0.5">
+              <div className="group relative">
                 <Link to="/activities" className={linkCls} activeProps={{ className: activeCls }} aria-haspopup="true">
                   {n.label}
                   <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" aria-hidden="true" />
