@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Activity, Dumbbell, CalendarHeart, Footprints, GraduationCap, Smile, Trophy, Users, Coffee, CircleDot, HeartPulse } from "lucide-react";
 import hero from "@/assets/hero-river-valley.jpg";
+import heroGolf from "@/assets/hero-golf.jpg";
+import heroPickleball from "@/assets/hero-pickleball.jpg";
+import { HeroCarousel } from "@/components/site/HeroCarousel";
 import walkers from "@/assets/hero-walking.jpg";
 import breakfast from "@/assets/community-breakfast.jpg";
 import exercise from "@/assets/exercise.jpg";
@@ -45,10 +48,10 @@ function Home() {
     <>
       {/* Hero */}
       <section className="bg-card">
-        <div className="container-site grid items-center gap-10 py-8 sm:py-12 md:py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:py-20">
-          <div>
+        <div className="container-site grid items-center gap-6 pb-10 lg:min-h-[calc(100vh-5rem)] lg:grid-cols-[1.05fr_1fr] lg:gap-12 lg:py-8">
+          <div className="flex min-h-[calc(100svh-5rem)] flex-col justify-center py-8 lg:min-h-0 lg:py-0">
             <p className="eyebrow hidden sm:inline-flex">Edmonton, Alberta · Since 1979</p>
-            <h1 className="text-[2rem] leading-tight sm:mt-5 sm:text-5xl lg:text-[3.4rem]">
+            <h1 className="text-[2.4rem] leading-tight sm:mt-5 sm:text-5xl lg:text-[3rem] xl:text-[3.4rem]">
               Stay Active.<br /> Stay Connected.<br /> Support your Heart.
             </h1>
             <p className="mt-4 text-lg font-bold text-warm sm:mt-5 md:text-2xl">
@@ -57,7 +60,7 @@ function Home() {
             <p className="mt-5 hidden text-lg md:block xl:text-xl">
               Discover a welcoming Edmonton community where active living, meaningful friendships, and heart-health education come together.
             </p>
-            <p className="mt-4 hidden text-muted-foreground md:block">
+            <p className="mt-4 hidden text-muted-foreground md:block lg:hidden 2xl:block">
               CASE brings people together through exercise, recreation, educational programs, and social activities.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
@@ -65,13 +68,12 @@ function Home() {
               <Link to="/about" className="btn btn-outline">Learn About CASE</Link>
             </div>
           </div>
-          <img
-            src={hero}
-            alt="Four friends, seen from behind, walking a trail in Edmonton's river valley with the downtown skyline ahead"
-            width={1280}
-            height={1024}
-            fetchPriority="high"
-            className="aspect-[5/4] w-full rounded-3xl object-cover shadow-card"
+          <HeroCarousel
+            slides={[
+              { src: hero, alt: "Four friends, seen from behind, walking a trail in Edmonton's river valley with the downtown skyline ahead" },
+              { src: heroGolf, alt: "Two golfers, seen from behind, carrying their bags down a sunny fairway lined with spruce and birch trees" },
+              { src: heroPickleball, alt: "Members playing a friendly game of doubles pickleball in a bright recreation centre gym" },
+            ]}
           />
         </div>
       </section>
