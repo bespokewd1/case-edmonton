@@ -99,7 +99,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           description: "A community nonprofit in Edmonton supporting active, heart-healthy living through exercise, recreation, education, and social connection.",
           address: { "@type": "PostalAddress", addressLocality: "Edmonton", addressRegion: "AB", addressCountry: "CA" },
           areaServed: { "@type": "City", name: "Edmonton" },
-          sameAs: [],
           knowsAbout: ["Cardiac rehabilitation maintenance", "Heart-healthy exercise", "Community recreation for heart patients"],
           hasOfferCatalog: {
             "@type": "OfferCatalog",
