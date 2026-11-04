@@ -16,7 +16,7 @@ export const Route = createFileRoute("/events")({
   component: Events,
 });
 
-const topics = ["Heart health and wellness", "Healthy living", "First aid and safety", "Travel information", "Internet safety and cybersecurity", "Other practical educational topics"];
+const topics = ["Heart health", "Exercise and lifestyle", "Wellness", "First aid", "Travel", "Internet safety"];
 
 function Events() {
   const list = upcomingEvents();
@@ -38,7 +38,8 @@ function Events() {
       <section className="bg-secondary py-20">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <SectionHeading eyebrow="Education" title="Learning Together" text="CASE hosts educational presentations on topics relevant to members and their everyday lives." />
+            <SectionHeading eyebrow="Education" title="Learning Together" text="CASE hosts educational sessions on heart health, exercise, lifestyle, and other useful topics." />
+            <p className="mt-4 rounded-xl bg-card px-5 py-4 text-lg font-semibold shadow-soft">Sessions are free and open to members, friends, and anyone thinking about joining.</p>
             <h3 className="mt-8 text-xl">Topics may include</h3>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2">
               {topics.map((t) => (
@@ -58,7 +59,7 @@ function Events() {
           </span>
           <div>
             <h2 className="text-3xl">Heart Murmurs — CASE Newsletter</h2>
-            <p className="mt-4 text-lg">Heart Murmurs helps members stay informed about community news, upcoming events, and educational information.</p>
+            <p className="mt-4 text-lg">Heart Murmurs is CASE's own newsletter, sharing heart-health information, upcoming events, and program news.</p>
             <p className="mt-4 rounded-xl bg-secondary px-5 py-4 font-semibold">The latest issue will be shared here soon. Past issues will be available in the future members area.</p>
           </div>
         </div>
@@ -69,8 +70,13 @@ function Events() {
         <div>
           <SectionHeading eyebrow="Gatherings" title="Community Gatherings" />
           <div className="mt-6 space-y-4 text-lg">
-            <p>The social side of CASE is a big part of what keeps people coming back. Shared meals, seasonal celebrations, and casual get-togethers make it easy to meet fellow members.</p>
-            <p>Whether it's a summer barbecue, a holiday celebration, or a monthly breakfast, there's always a friendly face to say hello to.</p>
+            <p>The social side of CASE is a big part of what keeps people coming back. Every year, members look forward to these traditions:</p>
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {[["June", "Summer Barbecue"], ["December", "Christmas Dinner Party"], ["January", "Welcome-Back Dinner"], ["Monthly", "Social Breakfast"]].map(([m, t]) => (
+                <li key={t} className="card-surface p-4"><p className="text-sm font-bold uppercase tracking-wider text-warm">{m}</p><p className="font-bold text-primary">{t}</p></li>
+              ))}
+            </ul>
+            <p className="text-base text-muted-foreground">These are recurring traditions — contact CASE for this year's dates.</p>
           </div>
         </div>
       </section>

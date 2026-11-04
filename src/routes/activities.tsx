@@ -24,34 +24,37 @@ type Item = { id: string; title: string; img: string; alt: string; body: string[
 const items: Item[] = [
   {
     id: "exercise", title: "Healthy at Heart Exercise", img: exercise, alt: "Older adults in a group exercise class at a recreation centre",
-    body: ["CASE members participate in exercise opportunities at Terwillegar Community Recreation Centre.", "The program provides opportunities for participants to maintain regular physical activity in a community environment."],
+    body: ["Healthy at Heart is CASE's regular exercise program at the Terwillegar Recreation Centre.", "Sessions include aerobic exercise and pickleball, giving members a friendly, steady way to keep moving. Our pamphlet lists sessions on Tuesdays and Thursdays."],
+    list: ["Aerobic exercise", "Pickleball"],
     location: "Terwillegar Community Recreation Centre, Edmonton",
-    note: "For current activity schedules, please contact CASE.",
+    note: "Contact CASE for current program details and session times.",
   },
   {
     id: "golf", title: "Golf", img: golf, alt: "Two friends enjoying a round of golf on a sunny day",
-    body: ["Members enjoy recreational golf during the golf season, with a relaxed, friendly pace that welcomes all skill levels.", "Virtual golf opportunities may also be available during winter."],
-    location: "Countryside, Edmonton area",
-    note: "Please contact CASE for current golf details and schedules.",
+    body: ["Members enjoy recreational golf through the season at a relaxed, friendly pace that welcomes all skill levels.", "In winter, virtual golf opportunities keep the swing going until spring."],
+    location: "Countryside (venue to be confirmed)",
+    note: "Contact CASE for current program details.",
   },
   {
     id: "walking", title: "Walking Group", img: walking, alt: "A group of friends walking along a trail on an autumn day",
-    body: ["Seasonal outdoor walking sessions provide opportunities for gentle exercise, friendship, and enjoying Edmonton's outdoor spaces."],
+    body: ["Summer walking sessions are a chance to build exercise and endurance outdoors while enjoying good company and Edmonton's green spaces."],
+    note: "Contact CASE for current program details.",
   },
   {
     id: "bowling", title: "Bowling", img: bowling, alt: "Friends cheering as a man bowls",
-    body: ["A recreational activity focused on fun, coordination, and social engagement."],
+    body: ["Bowling is low-impact recreation that supports coordination and balance — and plenty of friendly camaraderie."],
+    note: "Contact CASE for current program details.",
   },
   {
-    id: "essentrics", title: "Essentrics", img: exercise, alt: "Adults moving through a gentle flexibility routine",
-    body: ["CASE members may have access to online Essentrics workouts through an associated instructor.", "The program focuses on flexibility, mobility, and movement. Member discounts may be available."],
-    note: "Contact CASE to learn more about Essentrics access.",
+    id: "essentrics", title: "Essentrics / Aging Backwards", img: exercise, alt: "Adults moving through a gentle flexibility routine",
+    body: ["A full-body workout focusing on strength, flexibility, and posture.", "Workouts are available online, so you can follow along at home. Membership-related discounts may be offered."],
+    note: "Contact CASE for current program details.",
   },
   {
     id: "social", title: "Social Activities", img: breakfast, alt: "Members sharing a cheerful breakfast together",
-    body: ["Some of the best moments at CASE happen around a table. Our social calendar gives members a chance to relax, celebrate, and get to know one another."],
-    list: ["Summer barbecues", "Christmas celebrations", "Welcome-back dinners", "Monthly social breakfasts", "Other community gatherings"],
-    note: "Schedules and availability may vary throughout the year.",
+    body: ["Some of the best moments at CASE happen around a table. These are our long-standing traditions — a chance to relax, celebrate, and get to know one another."],
+    list: ["Summer Barbecue — June", "Christmas Dinner Party — December", "Welcome-Back Dinner — January", "Monthly Social Breakfast"],
+    note: "These are recurring traditions. Contact CASE for this year's dates.",
   },
 ];
 
