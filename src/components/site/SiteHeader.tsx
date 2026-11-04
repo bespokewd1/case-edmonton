@@ -4,6 +4,14 @@ import { useState } from "react";
 import { NAV } from "@/lib/site";
 import { Logo } from "./Logo";
 
+const ACTIVITY_LINKS = [
+  { hash: "exercise", label: "Healthy at Heart" },
+  { hash: "golf", label: "Golf" },
+  { hash: "walking", label: "Walking Group" },
+  { hash: "bowling", label: "Bowling" },
+  { hash: "essentrics", label: "Essentrics / Aging Backwards" },
+] as const;
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const linkCls =
@@ -55,6 +63,22 @@ export function SiteHeader() {
                 >
                   {n.label}
                 </Link>
+                {n.to === "/activities" && (
+                  <ul className="mb-1 ml-4 border-l-2 border-burgundy-soft pl-2">
+                    {ACTIVITY_LINKS.map((a) => (
+                      <li key={a.hash}>
+                        <Link
+                          to="/activities"
+                          hash={a.hash}
+                          onClick={() => setOpen(false)}
+                          className="block rounded-lg px-3 py-2.5 text-base font-medium text-muted-foreground hover:bg-burgundy-soft hover:text-primary"
+                        >
+                          {a.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
             <li className="pt-2">

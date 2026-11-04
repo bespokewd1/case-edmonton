@@ -1,3 +1,4 @@
+import { BackToTop } from "@/components/site/BackToTop";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -143,6 +144,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <SiteFooter />
+      <BackToTop />
     </QueryClientProvider>
   );
 }
