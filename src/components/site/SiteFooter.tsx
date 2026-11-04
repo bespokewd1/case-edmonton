@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Mail, MapPin } from "lucide-react";
 import { EMAIL, NAV } from "@/lib/site";
 import { LogoMark } from "./Logo";
+import { EdmontonNow } from "./EdmontonNow";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -46,8 +47,21 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border">
+        <div className="container-site py-4">
+          <EdmontonNow />
+        </div>
+      </div>
+      <div className="border-t border-border">
         <div className="container-site flex flex-col gap-3 py-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} Cardiac Athletic Society of Edmonton. All rights reserved.</p>
+          <div className="space-y-1">
+            <p>© {year} Cardiac Athletic Society of Edmonton. All rights reserved.</p>
+            <p>
+              Web Development by{" "}
+              <a href="https://www.facebook.com/bespokewebdesignEdmonton/" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:underline">
+                Bespoke Web Design
+              </a>
+            </p>
+          </div>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-primary hover:underline">Privacy Policy</Link>
             <Link to="/accessibility" className="hover:text-primary hover:underline">Accessibility</Link>

@@ -143,6 +143,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <SiteFooter />
+      <BackToTop />
     </QueryClientProvider>
   );
 }
