@@ -129,7 +129,7 @@ function Home() {
 
       {/* Benefits */}
       <section className="container-site py-20">
-        <SectionHeading center eyebrow="Why people join" title="More Than Activities. A Place to Belong." text="CASE was established to help people continue an active, heart-healthy lifestyle beyond their initial cardiac rehabilitation. Members value it for:" />
+        <SectionHeading center eyebrow="Why people join" title="More Than Activities. A Place to Belong." text="Over the years, CASE members have discovered that taking part in our exercise, educational, and social programs brings meaningful, lasting benefits:" />
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
           {benefits.map((b) => (
             <li key={b.title} className="card-surface p-7 lg:col-span-2 lg:[&:nth-child(4)]:col-start-2">

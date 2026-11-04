@@ -24,35 +24,35 @@ type Item = { id: string; title: string; img: string; alt: string; body: string[
 const items: Item[] = [
   {
     id: "exercise", title: "Healthy at Heart Exercise", img: exercise, alt: "Older adults in a group exercise class at a recreation centre",
-    body: ["Healthy at Heart is CASE's regular exercise program at the Terwillegar Recreation Centre.", "Sessions include aerobic exercise and pickleball, giving members a friendly, steady way to keep moving. Our pamphlet lists sessions on Tuesdays and Thursdays."],
-    list: ["Aerobic exercise", "Pickleball"],
-    location: "Terwillegar Community Recreation Centre, Edmonton",
+    body: ["Our exercise program offers a variety of engaging activities that support heart health, strength, mobility, and social connection — at a pace that's comfortable and accessible.", "Healthy at Heart meets on Tuesdays and Thursdays, starting with an aerobic class and followed by pickleball."],
+    list: ["Aerobic exercise — 11:30 a.m. to 12:15 p.m.", "Pickleball — 12:15 p.m. to 12:45 p.m."],
+    location: "Booster Juice Recreation Centre (Terwillegar), Edmonton",
     note: "Contact CASE for current program details and session times.",
   },
   {
     id: "golf", title: "Golf", img: golf, alt: "Two friends enjoying a round of golf on a sunny day",
-    body: ["Members enjoy recreational golf through the season at a relaxed, friendly pace that welcomes all skill levels.", "In winter, virtual golf opportunities keep the swing going until spring."],
+    body: ["Members enjoy regular golf throughout the season at a relaxed, friendly pace that welcomes all skill levels.", "In winter, virtual golf opportunities keep the swing going until spring."],
     location: "Countryside (venue to be confirmed)",
     note: "Contact CASE for current program details.",
   },
   {
     id: "walking", title: "Walking Group", img: walking, alt: "A group of friends walking along a trail on an autumn day",
-    body: ["Summer walking sessions are a chance to build exercise and endurance outdoors while enjoying good company and Edmonton's green spaces."],
+    body: ["Seasonal summer walking sessions offer a relaxed, social way to build endurance and enjoy the outdoors."],
     note: "Contact CASE for current program details.",
   },
   {
     id: "bowling", title: "Bowling", img: bowling, alt: "Friends cheering as a man bowls",
-    body: ["Bowling is low-impact recreation that supports coordination and balance — and plenty of friendly camaraderie."],
+    body: ["A fun, low-impact activity that supports coordination, balance, and camaraderie among members."],
     note: "Contact CASE for current program details.",
   },
   {
     id: "essentrics", title: "Essentrics / Aging Backwards", img: exercise, alt: "Adults moving through a gentle flexibility routine",
-    body: ["A full-body workout focusing on strength, flexibility, and posture.", "Workouts are available online, so you can follow along at home. Membership-related discounts may be offered."],
+    body: ["A full-body workout you can do with ease at any age — building strength and flexibility, and helping you achieve better posture.", "Workouts are available online, so you can follow along at home. Membership-related discounts may be offered."],
     note: "Contact CASE for current program details.",
   },
   {
     id: "social", title: "Social Activities", img: breakfast, alt: "Members sharing a cheerful breakfast together",
-    body: ["Some of the best moments at CASE happen around a table. These are our long-standing traditions — a chance to relax, celebrate, and get to know one another."],
+    body: ["Community and connection are a vital part of CASE. Members often describe the social side of CASE as just as important as the exercise. Our yearly traditions include:"],
     list: ["Summer Barbecue — June", "Christmas Dinner Party — December", "Welcome-Back Dinner — January", "Monthly Social Breakfast"],
     note: "These are recurring traditions. Contact CASE for this year's dates.",
   },
