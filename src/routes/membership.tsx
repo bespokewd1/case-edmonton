@@ -36,8 +36,8 @@ function Membership() {
         <div>
           <SectionHeading eyebrow="Who can join?" title="Everyone interested in active living is welcome" />
           <div className="mt-6 space-y-4 text-lg">
-            <p>Membership is open to anyone interested in maintaining a healthy heart and taking part in exercise, education, and social events.</p>
-            <p>Spouses and significant others are encouraged to join in, too.</p>
+            <p>Membership is open to anyone with an interest in maintaining a healthy heart, with a range of activities that support a healthy lifestyle — including exercise, educational sessions, and social events.</p>
+            <p>CASE encourages spouses and significant others to take part in all programs and events.</p>
             <p>Many members join after cardiac rehabilitation, but it isn't required.</p>
           </div>
         </div>

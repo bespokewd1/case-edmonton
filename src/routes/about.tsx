@@ -32,8 +32,8 @@ function About() {
         <div>
           <SectionHeading eyebrow="Who we are" title="A community built around active living" />
           <div className="mt-6 space-y-4 text-lg">
-            <p>CASE is a community of individuals committed to maintaining active, heart-healthy lifestyles through exercise, education, recreation, and social activities.</p>
-            <p>The organization welcomes those who have completed cardiac rehabilitation as well as others interested in supporting their health and well-being.</p>
+            <p>CASE is a community of adults committed to maintaining a healthy heart through exercise, education, and social programs.</p>
+            <p>Today, we welcome new members who have completed cardiac rehabilitation, as well as anyone who simply wants to support a healthy heart lifestyle by taking part in our programs.</p>
           </div>
         </div>
         <div className="card-surface self-start border-l-4 border-l-warm p-8">
@@ -49,7 +49,7 @@ function About() {
           <div>
             <SectionHeading eyebrow="Our story" title="More than four decades of keeping each other moving" />
             <div className="mt-6 space-y-4 text-lg">
-              <p>CASE traces its roots to 1979, when cardiac rehabilitation staff at the University of Alberta Hospital saw that people finishing rehabilitation needed a way to keep up their heart-healthy exercise habits.</p>
+              <p>CASE traces its roots to 1979, when cardiac rehabilitation staff at the University of Alberta Hospital set out to help patients keep up a lifetime of heart-healthy exercise after finishing their rehabilitation program.</p>
               <p>That original purpose still guides CASE today. Over the years it has grown into a community built around exercise, education, recreation, and lasting friendships.</p>
               <p>The Cardiac Athletic Society of Edmonton was formally registered as a society in 1989.</p>
             </div>
