@@ -12,7 +12,7 @@ import { ContactCta, Notice, PageHero } from "@/components/site/Blocks";
 export const Route = createFileRoute("/activities")({
   head: () =>
     pageHead({
-      title: "Activities | Exercise, Golf, Walking & More | CASE Edmonton",
+      title: "Exercise & Social Programs | Healthy at Heart, Golf, Walking | CASE Edmonton",
       description: "Explore CASE activities in Edmonton: heart-healthy exercise at Terwillegar, golf, walking groups, bowling, Essentrics, and social gatherings.",
       path: "/activities",
     }),
@@ -51,7 +51,7 @@ const items: Item[] = [
     note: "Contact CASE for current program details.",
   },
   {
-    id: "social", title: "Social Activities", img: breakfast, alt: "Members sharing a cheerful breakfast together",
+    id: "social", title: "Social Programs", img: breakfast, alt: "Members sharing a cheerful breakfast together",
     body: ["Community and connection are a vital part of CASE. Members often describe the social side of CASE as just as important as the exercise. Our yearly traditions include:"],
     list: ["Summer Barbecue — June", "Christmas Dinner Party — December", "Welcome-Back Dinner — January", "Monthly Social Breakfast"],
     note: "These are recurring traditions. Contact CASE for this year's dates.",
@@ -61,8 +61,8 @@ const items: Item[] = [
 function Activities() {
   return (
     <>
-      <PageHero eyebrow="Activities" title="Stay Active. Enjoy Life. Connect With Others." text="Explore the activities that bring CASE members together throughout the year." image={education} alt="Members gathered for a friendly presentation" />
-      <nav aria-label="Activities on this page" className="container-site pt-10">
+      <PageHero eyebrow="Exercise & Social Programs" title="Stay Active. Enjoy Life. Connect With Others." text="Explore the activities that bring CASE members together throughout the year." image={education} alt="Members gathered for a friendly presentation" />
+      <nav aria-label="Programs on this page" className="container-site pt-10">
         <ul className="flex flex-wrap gap-2">
           {items.map((i) => (
             <li key={i.id}><a href={`#${i.id}`} className="btn btn-outline min-h-11 px-4 text-[0.95rem]">{i.title}</a></li>

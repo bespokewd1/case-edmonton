@@ -5,7 +5,7 @@ export const ORG_NAME = "Cardiac Athletic Society of Edmonton";
 export const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About CASE" },
-  { to: "/activities", label: "Activities" },
+  { to: "/activities", label: "Exercise Programs" },
   { to: "/events", label: "Events & News" },
   { to: "/membership", label: "Membership" },
   { to: "/contact", label: "Contact" },
