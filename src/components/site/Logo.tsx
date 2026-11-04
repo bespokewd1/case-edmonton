@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/case-logo.png.asset.json";
+import logoSrc from "@/assets/case-logo.webp";
 
 /**
  * Temporary brand mark. Replace the <svg> with the official
@@ -38,7 +38,7 @@ export function Logo() {
       aria-label="CASE — Cardiac Athletic Society of Edmonton, home"
     >
       <img
-        src={logoAsset.url}
+        src={logoSrc}
         alt=""
         width={1920}
         height={600}
