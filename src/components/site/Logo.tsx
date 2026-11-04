@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import logoAsset from "@/assets/case-logo.png.asset.json";
 
 /**
  * Temporary brand mark. Replace the <svg> with the official
@@ -28,17 +29,23 @@ export function LogoMark({ className = "h-12 w-12" }: { className?: string }) {
   );
 }
 
-export function Logo({ light = false }: { light?: boolean }) {
+export function Logo() {
   return (
-    <Link to="/" onClick={() => setTimeout(() => window.scrollTo({ top: 0 }), 50)} className="flex min-w-0 items-center gap-2 sm:gap-3" aria-label="CASE — Cardiac Athletic Society of Edmonton, home">
-      <LogoMark />
-      <span className="flex min-w-0 flex-col leading-none">
-        <span className={`text-2xl font-extrabold tracking-tight ${light ? "text-primary-foreground" : "text-primary"}`}>
-          CASE
-        </span>
-        <span className={`mt-1 max-w-[9.5rem] text-[0.7rem] sm:max-w-[11rem] font-semibold sm:text-xs ${light ? "" : "xl:hidden 2xl:block"} ${light ? "text-primary-foreground/85" : "text-muted-foreground"}`}>
-          Cardiac Athletic Society of Edmonton
-        </span>
+    <Link
+      to="/"
+      onClick={() => setTimeout(() => window.scrollTo({ top: 0 }), 50)}
+      className="flex min-w-0 shrink-0 flex-col items-start leading-none"
+      aria-label="CASE — Cardiac Athletic Society of Edmonton, home"
+    >
+      <img
+        src={logoAsset.url}
+        alt=""
+        width={1920}
+        height={600}
+        className="h-10 w-auto mix-blend-multiply sm:h-11"
+      />
+      <span className="mt-1 whitespace-nowrap text-[0.68rem] font-bold tracking-wide text-primary sm:text-[0.72rem]">
+        Cardiac Athletic Society of Edmonton
       </span>
     </Link>
   );
