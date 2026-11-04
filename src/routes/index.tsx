@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
 });
 
 const activities = [
-  { title: "Heart-Healthy Exercise", text: "Stay active through group exercise opportunities designed to encourage regular physical activity.", img: exercise, alt: "Older adults taking part in a group exercise class in a bright gym", icon: HeartPulse },
+  { title: "Heart-Healthy Exercise", text: "Healthy at Heart: aerobics and pickleball every Tuesday and Thursday, 11:30 a.m. – 12:45 p.m., at Booster Juice Recreation Centre (Terwillegar).", img: exercise, alt: "Older adults taking part in a group exercise class in a bright gym", icon: HeartPulse },
   { title: "Golf", text: "Enjoy recreational golf with fellow members and participate in seasonal activities.", img: golf, alt: "Two friends putting on a sunny golf green", icon: Trophy },
   { title: "Walking Groups", text: "Get outdoors, enjoy fresh air, and connect with friends through group walks.", img: walkers, alt: "A group of adults walking together on a river valley trail", icon: Footprints },
   { title: "Bowling", text: "Have fun, stay engaged, and enjoy low-impact recreation in a social setting.", img: bowling, alt: "A man bowling while friends cheer behind him", icon: CircleDot },
