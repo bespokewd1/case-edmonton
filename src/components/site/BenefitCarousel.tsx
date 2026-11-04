@@ -29,11 +29,11 @@ export function BenefitCarousel({ benefits }: { benefits: Benefit[] }) {
       {/* Mobile: swipeable glass cards */}
       <div className="mt-10 md:hidden">
         <div
-          ref={track}
-          onScroll={onScroll}
           className="rounded-[2rem] bg-gradient-to-br from-sage-soft via-card to-secondary p-4"
         >
           <div
+            ref={track}
+            onScroll={onScroll}
             role="region"
             aria-roledescription="carousel"
             aria-label="Benefits of CASE"
