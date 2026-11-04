@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Activity, BookOpen, CalendarHeart, Footprints, GraduationCap, Smile, Trophy, Users, Coffee, CircleDot, HeartPulse } from "lucide-react";
-import hero from "@/assets/hero-walking.jpg";
+import hero from "@/assets/hero-river-valley.jpg";
+import walkers from "@/assets/hero-walking.jpg";
 import breakfast from "@/assets/community-breakfast.jpg";
 import exercise from "@/assets/exercise.jpg";
 import golf from "@/assets/golf.jpg";
@@ -24,7 +25,7 @@ export const Route = createFileRoute("/")({
 const activities = [
   { title: "Heart-Healthy Exercise", text: "Stay active through group exercise opportunities designed to encourage regular physical activity.", img: exercise, alt: "Older adults taking part in a group exercise class in a bright gym", icon: HeartPulse },
   { title: "Golf", text: "Enjoy recreational golf with fellow members and participate in seasonal activities.", img: golf, alt: "Two friends putting on a sunny golf green", icon: Trophy },
-  { title: "Walking Groups", text: "Get outdoors, enjoy fresh air, and connect with friends through group walks.", img: hero, alt: "A group of adults walking together on a river valley trail", icon: Footprints },
+  { title: "Walking Groups", text: "Get outdoors, enjoy fresh air, and connect with friends through group walks.", img: walkers, alt: "A group of adults walking together on a river valley trail", icon: Footprints },
   { title: "Bowling", text: "Have fun, stay engaged, and enjoy low-impact recreation in a social setting.", img: bowling, alt: "A man bowling while friends cheer behind him", icon: CircleDot },
   { title: "Social Gatherings", text: "Build friendships through community breakfasts, celebrations, and special events.", img: breakfast, alt: "Friends laughing together over breakfast in a community hall", icon: Coffee },
   { title: "Educational Sessions", text: "Learn about heart health, wellness, safety, and everyday topics through educational presentations.", img: education, alt: "An audience listening to a friendly presentation in a community room", icon: GraduationCap },
@@ -62,7 +63,7 @@ function Home() {
           </div>
           <img
             src={hero}
-            alt="A smiling group of adults walking together along an autumn trail in Edmonton's river valley"
+            alt="Four friends, seen from behind, walking a trail in Edmonton's river valley with the downtown skyline ahead"
             width={1280}
             height={1024}
             fetchPriority="high"
@@ -72,7 +73,7 @@ function Home() {
       </section>
 
       {/* Trust strip */}
-      <section aria-label="About CASE at a glance" className="border-y border-border bg-background">
+      <section aria-label="About CASE at a glance" className="bg-primary text-primary-foreground">
         <ul className="container-site grid gap-6 py-8 sm:grid-cols-3">
           {[
             { icon: CalendarHeart, text: "Serving Edmonton Since 1979" },
@@ -80,7 +81,7 @@ function Home() {
             { icon: Smile, text: "A Welcoming Local Community" },
           ].map(({ icon: Icon, text }) => (
             <li key={text} className="flex items-center gap-3 font-bold">
-              <Icon className="h-6 w-6 shrink-0 text-sage-deep" aria-hidden="true" />
+              <Icon className="h-6 w-6 shrink-0 text-primary-foreground/80" aria-hidden="true" />
               {text}
             </li>
           ))}
