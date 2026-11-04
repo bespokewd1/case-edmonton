@@ -4,6 +4,7 @@ import hero from "@/assets/hero-river-valley.jpg";
 import heroGolf from "@/assets/hero-golf.jpg";
 import heroPickleball from "@/assets/hero-pickleball.jpg";
 import { HeroCarousel } from "@/components/site/HeroCarousel";
+import { BenefitCarousel } from "@/components/site/BenefitCarousel";
 import walkers from "@/assets/hero-walking.jpg";
 import breakfast from "@/assets/community-breakfast.jpg";
 import exercise from "@/assets/exercise.jpg";
