@@ -57,22 +57,17 @@ export function SiteHeader() {
                     ))}
                   </ul>
                 </div>
+                </div>
+                <Link to="/activities" hash="social" className={linkCls}>
+                  Social Programs
+                </Link>
               </div>
             ) : (
-              <span key={n.to} className="contents">
-                <Link to={n.to} className={linkCls} activeProps={{ className: activeCls }} activeOptions={{ exact: n.to === "/" }}>
-                  {n.label}
-                </Link>
-                {n.to === "/activities" ? null : null}
-                {n.to === "/about" && (
-                  <></>
-                )}
-              </span>
+              <Link key={n.to} to={n.to} className={linkCls} activeProps={{ className: activeCls }} activeOptions={{ exact: n.to === "/" }}>
+                {n.label}
+              </Link>
             ),
           )}
-          <Link to="/activities" hash="social" className={linkCls}>
-            Social Programs
-          </Link>
           <Link to="/members" className="ml-2 btn btn-outline min-h-11 whitespace-nowrap px-4 text-[0.9rem]">
             <Lock className="h-4 w-4" aria-hidden="true" /> Members Login
           </Link>
