@@ -49,7 +49,7 @@ function Home() {
           <div>
             <p className="eyebrow hidden sm:inline-flex">Edmonton, Alberta · Since 1979</p>
             <h1 className="text-[2rem] leading-tight sm:mt-5 sm:text-5xl lg:text-[3.4rem]">
-              Stay Active.<br className="sm:hidden" /> Stay Connected.<br className="sm:hidden" /> Support your Heart.
+              Stay Active.<br /> Stay Connected.<br /> Support your Heart.
             </h1>
             <p className="mt-4 text-lg font-bold text-warm sm:mt-5 md:text-2xl">
               Building strength, confidence, and lasting friendships through exercise, education, and community activities in Edmonton.
