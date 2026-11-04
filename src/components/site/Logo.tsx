@@ -36,7 +36,7 @@ export function Logo({ light = false }: { light?: boolean }) {
         <span className={`text-2xl font-extrabold tracking-tight ${light ? "text-primary-foreground" : "text-primary"}`}>
           CASE
         </span>
-        <span className={`mt-1 max-w-[9.5rem] text-[0.7rem] sm:max-w-[11rem] font-semibold sm:text-xs ${light ? "text-primary-foreground/85" : "text-muted-foreground"}`}>
+        <span className={`mt-1 max-w-[9.5rem] text-[0.7rem] sm:max-w-[11rem] font-semibold sm:text-xs ${light ? "" : "xl:hidden 2xl:block"} ${light ? "text-primary-foreground/85" : "text-muted-foreground"}`}>
           Cardiac Athletic Society of Edmonton
         </span>
       </span>
