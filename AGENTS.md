@@ -12,3 +12,4 @@
 ## Project rules
 - Events live in src/data/events.ts as a typed static list (no backend); pages show a "coming soon" state when it's empty.
 - Shared page head/SEO comes from pageHead() in src/lib/site.ts so each route sets unique title, description and canonical.
+- The homepage uses a responsive grid: introduction/photo/actions in mobile order, with an inline desktop action group; manual photo carousel controls use the shared Button component for accessible interaction.

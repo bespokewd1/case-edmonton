@@ -34,7 +34,7 @@ export function Logo() {
     <Link
       to="/"
       onClick={() => setTimeout(() => window.scrollTo({ top: 0 }), 50)}
-      className="flex min-w-0 shrink-0 flex-col items-start leading-none"
+      className="flex min-w-0 flex-col items-start leading-none"
       aria-label="CASE — Cardiac Athletic Society of Edmonton, home"
     >
       <img
@@ -42,9 +42,9 @@ export function Logo() {
         alt=""
         width={1920}
         height={600}
-        className="h-10 w-auto mix-blend-multiply sm:h-11"
+        className="h-8 w-auto max-w-full object-contain mix-blend-multiply sm:h-10"
       />
-      <span className="mt-1 whitespace-nowrap text-[0.68rem] font-bold tracking-wide text-primary sm:text-[0.72rem]">
+      <span className="mt-1 max-w-[220px] text-[11px] font-semibold leading-tight text-primary sm:max-w-none sm:text-[12px]">
         Cardiac Athletic Society of Edmonton
       </span>
     </Link>
