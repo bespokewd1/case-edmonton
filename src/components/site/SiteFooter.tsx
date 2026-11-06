@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin } from "lucide-react";
 import { EMAIL, NAV } from "@/lib/site";
-import { LogoMark } from "./Logo";
+import { Logo } from "./Logo";
 import { EdmontonNow } from "./EdmontonNow";
 
 export function SiteFooter() {
@@ -10,13 +10,7 @@ export function SiteFooter() {
     <footer className="mt-24 border-t border-border bg-card">
       <div className="container-site grid gap-12 py-16 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-3">
-            <LogoMark />
-            <div className="leading-tight">
-              <p className="text-2xl font-extrabold text-primary">CASE</p>
-              <p className="text-sm font-semibold text-muted-foreground">Cardiac Athletic Society of Edmonton</p>
-            </div>
-          </div>
+          <Logo />
           <p className="mt-5 max-w-xs text-muted-foreground">
             Supporting active living, education, and community connections in Edmonton.
           </p>

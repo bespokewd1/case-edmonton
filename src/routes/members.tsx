@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { LogoMark } from "@/components/site/Logo";
+import { Logo } from "@/components/site/Logo";
 import { pageHead } from "@/lib/site";
 
 export const Route = createFileRoute("/members")({
@@ -18,7 +18,7 @@ function Members() {
   return (
     <section className="container-site flex justify-center py-20 md:py-28">
       <div className="card-surface max-w-2xl p-8 text-center md:p-14">
-        <LogoMark className="mx-auto h-20 w-20" />
+        <Logo className="items-center" />
         <p className="mt-6 inline-block rounded-full bg-sage-soft px-4 py-1 text-sm font-bold text-sage-deep">Coming Soon</p>
         <h1 className="mt-4 text-4xl">Members Area — Coming Soon</h1>
         <p className="mt-5 text-lg">We're working on a dedicated space where CASE members can access newsletters, community updates, helpful documents, and additional resources.</p>
