@@ -29,7 +29,7 @@ export function SiteFooter() {
                 <Link to={n.to} className="hover:text-primary hover:underline">{n.label}</Link>
               </li>
             ))}
-            <li><Link to="/members" className="hover:text-primary hover:underline">Members Login</Link></li>
+            <li><Link to="/activities" hash="social" className="hover:text-primary hover:underline">Social Programs</Link></li>
           </ul>
         </nav>
         <div>
