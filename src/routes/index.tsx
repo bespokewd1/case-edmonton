@@ -14,6 +14,7 @@ import education from "@/assets/education.jpg";
 import { pageHead } from "@/lib/site";
 import { upcomingEvents } from "@/data/events";
 import { EmptyEvents, EventCard, SectionHeading } from "@/components/site/Blocks";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
   head: () =>
@@ -49,26 +50,24 @@ function Home() {
     <>
       {/* Hero */}
       <section className="bg-card">
-        <div className="container-site grid items-center gap-6 pb-10 lg:min-h-[calc(100vh-5rem)] lg:grid-cols-[1.05fr_1fr] lg:gap-12 lg:py-8">
-          <div className="flex min-h-[calc(100svh-5rem)] flex-col justify-center py-8 lg:min-h-0 lg:py-0">
-            <p className="eyebrow hidden sm:inline-flex">Edmonton, Alberta · Since 1979</p>
-            <h1 className="text-[2.4rem] leading-tight sm:mt-5 sm:text-5xl lg:text-[3rem] xl:text-[3.4rem]">
-              Stay Active.<br /> Stay Connected.<br /> Support your Heart.
+        <div className="container-site grid items-center gap-x-10 gap-y-5 py-7 sm:py-10 lg:grid-cols-[1fr_1.05fr] lg:gap-x-12 lg:py-12 xl:py-16">
+          <div className="min-w-0 lg:col-start-1 lg:row-start-1">
+            <p className="eyebrow hidden sm:inline-flex">Edmonton, Alberta</p>
+            <h1 className="text-[34px] leading-[1.15] sm:mt-4 sm:text-[40px] lg:text-[44px] xl:text-[48px]">
+              Stay Active.<br />Stay Connected.
             </h1>
-            <p className="mt-4 text-lg font-bold text-warm sm:mt-5 md:text-2xl">
-              Building strength, confidence, and lasting friendships through exercise, education, and community activities in Edmonton.
+            <p className="mt-4 max-w-lg text-[19px] font-medium leading-relaxed text-warm sm:text-[21px] lg:mt-5 lg:text-[22px]">
+              Building strength, confidence, and community through active living.
             </p>
-            <p className="mt-5 hidden text-lg md:block xl:text-xl">
-              Discover a welcoming Edmonton community where active living, meaningful friendships, and heart-health education come together.
+            <p className="mt-3 max-w-lg text-[17px] leading-relaxed text-muted-foreground lg:mt-4 lg:text-[18px]">
+              Discover a welcoming Edmonton community offering exercise, recreation, education, and meaningful friendships.
             </p>
-            <p className="mt-4 hidden text-muted-foreground md:block lg:hidden 2xl:block">
-              CASE brings people together through exercise, recreation, educational programs, and social activities.
-            </p>
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-              <Link to="/activities" className="btn btn-primary">Explore Our Activities</Link>
-              <Link to="/about" className="btn btn-outline">Learn About CASE</Link>
+            <div className="mt-7 hidden flex-wrap gap-3 lg:flex">
+              <Button asChild variant="ghost" className="btn btn-primary rounded-xl"><Link to="/activities">Explore Activities</Link></Button>
+              <Button asChild variant="ghost" className="btn btn-outline rounded-xl"><Link to="/membership">Become a Member</Link></Button>
             </div>
           </div>
+          <div className="min-w-0 lg:col-start-2 lg:row-start-1">
           <HeroCarousel
             slides={[
               { src: hero, alt: "Four friends, seen from behind, walking a trail in Edmonton's river valley with the downtown skyline ahead" },
@@ -76,6 +75,11 @@ function Home() {
               { src: heroPickleball, alt: "Members playing a friendly game of doubles pickleball in a bright recreation centre gym" },
             ]}
           />
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:hidden">
+            <Button asChild variant="ghost" className="btn btn-primary rounded-xl"><Link to="/activities">Explore Activities</Link></Button>
+            <Button asChild variant="ghost" className="btn btn-outline rounded-xl"><Link to="/membership">Become a Member</Link></Button>
+          </div>
         </div>
       </section>
 
@@ -83,7 +87,7 @@ function Home() {
       <section aria-label="About CASE at a glance" className="bg-primary text-primary-foreground">
         <ul className="container-site grid gap-6 py-8 sm:grid-cols-3">
           {[
-            { icon: CalendarHeart, text: "Serving Edmonton Since 1979" },
+            { icon: CalendarHeart, text: "An Edmonton Community" },
             { icon: Users, text: "Exercise, Education & Friendship" },
             { icon: Smile, text: "A Welcoming Local Community" },
           ].map(({ icon: Icon, text }) => (

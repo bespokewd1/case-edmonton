@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { ChevronDown, Lock, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { NAV } from "@/lib/site";
+import { Button } from "@/components/ui/button";
 import { Logo } from "./Logo";
 
 const EXERCISE_LINKS = [
@@ -19,6 +20,16 @@ export function SiteHeader() {
     setOpen(false);
     setExOpen(false);
   };
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        setExOpen(false);
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
   const linkCls =
     "inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-2 text-[0.9rem] font-semibold text-foreground transition-colors hover:bg-burgundy-soft hover:text-primary";
   const activeCls = "text-primary bg-burgundy-soft";
@@ -32,9 +43,9 @@ export function SiteHeader() {
       >
         Skip to main content
       </a>
-      <div className="container-site flex h-20 items-center justify-between gap-3">
+      <div className="container-site grid min-h-16 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-2 sm:min-h-20 xl:flex xl:justify-between">
         <Logo />
-        <nav aria-label="Main" className="hidden items-center gap-0.5 xl:flex">
+        <nav aria-label="Main" className="hidden shrink-0 items-center gap-1 xl:flex">
           {NAV.map((n) =>
             n.to === "/activities" ? (
               <div key={n.to} className="flex items-center gap-0.5">
@@ -44,7 +55,7 @@ export function SiteHeader() {
                   <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" aria-hidden="true" />
                 </Link>
                 <div className="invisible absolute left-0 top-full z-50 pt-2 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                  <ul className="w-64 rounded-2xl border border-border bg-card p-2 shadow-card">
+                  <ul className="w-64 rounded-xl border border-border bg-card p-2 shadow-soft">
                     {EXERCISE_LINKS.map((a) => (
                       <li key={a.hash}>
                         <Link
@@ -69,38 +80,38 @@ export function SiteHeader() {
               </Link>
             ),
           )}
-          <Link to="/members" className="ml-2 btn btn-outline min-h-11 whitespace-nowrap px-4 text-[0.9rem]">
-            <Lock className="h-4 w-4" aria-hidden="true" /> Members Login
-          </Link>
         </nav>
-        <button
+        <Button
           type="button"
-          className="btn btn-outline min-h-12 shrink-0 px-4 xl:hidden"
+          variant="ghost"
+          size="icon"
+          className="h-11 w-11 shrink-0 rounded-lg text-primary xl:hidden [&_svg]:size-6"
+          aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
-          Menu
-        </button>
+        </Button>
       </div>
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile" className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-border bg-background xl:hidden">
+        <nav id="mobile-nav" aria-label="Mobile" className="max-h-[calc(100svh-5rem)] overflow-y-auto border-t border-border bg-background xl:hidden">
           <ul className="container-site flex flex-col gap-1 py-4">
             {NAV.map((n) => (
               <li key={n.to}>
                 {n.to === "/activities" ? (
                   <>
-                    <button
+                    <Button
                       type="button"
+                      variant="ghost"
                       aria-expanded={exOpen}
                       aria-controls="mobile-exercise"
                       onClick={() => setExOpen((v) => !v)}
-                      className={`${mobileLink} flex w-full items-center justify-between text-left`}
+                      className={`${mobileLink} flex h-auto w-full items-center justify-between whitespace-normal text-left`}
                     >
                       {n.label}
                       <ChevronDown className={`h-5 w-5 transition-transform ${exOpen ? "rotate-180" : ""}`} aria-hidden="true" />
-                    </button>
+                    </Button>
                     {exOpen && (
                       <ul id="mobile-exercise" className="mb-1 ml-4 border-l-2 border-burgundy-soft pl-2">
                         <li>
@@ -141,11 +152,6 @@ export function SiteHeader() {
                 )}
               </li>
             ))}
-            <li className="pt-2">
-              <Link to="/members" onClick={close} className="btn btn-outline w-full">
-                <Lock className="h-4 w-4" aria-hidden="true" /> Members Login
-              </Link>
-            </li>
           </ul>
         </nav>
       )}
